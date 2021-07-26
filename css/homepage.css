@@ -1,0 +1,76 @@
+
+
+.nav-link {
+    margin-right: 30px;
+    text-transform: uppercase;
+}    
+
+.dropdown-menu .dropdown-item{
+    color: black;
+}
+
+.dropdown-menu{
+    border: 0px solid;
+    border-left: 3px solid;
+    margin-left: 12px;
+    background-color: transparent;
+}
+
+.jumbotron{
+    background-image: url(../asset/homepage_header_img.jpg);
+    background-size: cover;
+    height: 450px;
+}
+
+.jumbotron .display-4{
+    margin-top: 120px;
+    font-size: 30px;
+}
+
+.jumbotron .lead{
+    font-size: 15px;
+}
+
+.jumbotron .display-4, .jumbotron .lead{
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 992px) {
+
+    .nav-link, .dropdown-menu .dropdown-item{
+        color: white;
+    }
+
+    .nav-link:hover::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid #0b63cb;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 4px;
+        margin-bottom: -7px;
+    }
+
+    .dropdown-menu{
+        background-color: black; opacity: .4;
+        border: 0px solid;
+        border-left: 4px solid white;
+        border-radius: 0px 4px 4px 0px;
+        margin-left:15px;
+    }
+
+    .jumbotron {
+        margin-top: -50px;
+        height: 775px;
+    }
+
+    .jumbotron .display-4{
+        margin-top: 250px;
+        font-size: 72px;
+    }
+
+    .jumbotron .lead{
+        font-size: 25px;
+    }
+}
