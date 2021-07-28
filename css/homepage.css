@@ -1,4 +1,8 @@
 
+.navigation{
+    position: relative;
+    z-index: 3;
+}
 
 .nav-link {
     margin-right: 30px;
@@ -17,18 +21,56 @@
 }
 
 .jumbotron{
-    background-image: url(../asset/homepage_header_img.jpg);
+    background-image:transparent;
     background-size: cover;
     height: 450px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+}
+
+.jumbotron::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    background-image: url(../asset/gedungftm.jpeg);
+    filter:blur(2px);
+    background-size:cover;
+}
+
+.jumbotron::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .4;
+    bottom: 0;
+    z-index: 2;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))
+}
+
+.jumbotron .container{
+    position: relative;
+    z-index: 4;
+    text-shadow: 1px 1px 1px rgba(0, 0 ,0 , .4);
 }
 
 .jumbotron .display-4{
     margin-top: 120px;
+    z-index: 4;
     font-size: 30px;
 }
 
 .jumbotron .lead{
     font-size: 15px;
+    z-index: 4;
+    font-weight: 40;
 }
 
 .jumbotron .display-4, .jumbotron .lead{
@@ -36,17 +78,191 @@
     color: white;
 }
 
-@media (min-width: 992px) {
+.separator{
+    height:5px;
+    width:80%;
+    margin: 20px auto;
+    background-color: #b89F71;
+    border-radius: 5px;
+}
 
-    .nav-link, .dropdown-menu .dropdown-item{
+.container-body {
+    position: relative;
+    padding-top:30px;
+    padding-bottom:30px;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(35, 15, 19, 1), rgba(237,207, 169, 1));
+    padding-top:30px;
+}
+
+.short-desc h1{
+        text-transform: uppercase;
         color: white;
+        font-size: 24px;
     }
 
-    .nav-link:hover::after{
+    .container-body .main-content .short-desc {
+        background-color: rgba(170,74, 48, .64);
+        border-radius: 0px 12px 12px 0px;
+        margin-right: 50px;
+        padding: 30px 50px 30px 20px;
+    }
+
+    .container-body .main-content .short-desc .content{
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-left: 15px;
+        border-left: 3px solid white;
+        text-align: justify;
+    }
+
+.book-header{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 12px;
+    text-shadow: .2px .2px .2px rgba(0,0,0,1);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.book-category .category .category-block .title{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 18px;
+}
+
+.category-block {
+    height: 180px;
+    margin-left: 60px;
+    margin-right: 50px;
+    border-radius: 15px;
+    margin-top: 16px;
+}
+
+.category .webinars{
+    background-image: url(../asset/seminar.jpg);
+    background-size: cover;
+}
+
+.category .reference{
+    background-image: url(../asset/rak-buku.jpg);
+    background-size: cover;
+}
+
+.category .collage{
+    background-image: url(../asset/open-pit.jpg);
+    background-size: cover;
+}
+
+.category-block .title{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.footer{
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 40px;
+}
+
+.copyright, .social{
+    display: inline-block;
+    line-height: 40px;
+    position: relative;
+}
+
+.footer .copyright{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.footer .social{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+
+.copyright::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    right : -1px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background-color: #000;
+    border-radius:10px;
+    height:80%;
+    width: 2px;
+}
+
+.social .footerus{
+    margin-left: 10%;
+    margin-right: 5%;
+    display: inline-block;
+}
+
+.social-icon {
+    position: absolute;
+    margin-left: 10%;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    display: inline-block;
+    height: 30px;
+    width: 50%;
+    margin-left: 5px;
+}
+
+.social-link .icon{
+    display: inline-block;
+    height:20px;
+    width:20px;
+    margin-left: 5px;
+}
+
+.social-link .wa{
+    background-image: url(../asset/wa.png);
+    background-size: cover;
+}
+
+.social-link .fb{
+    background-image: url(../asset/fb.png);
+    background-size: cover;
+}
+
+.social-link .ig{
+    background-image: url(../asset/ig.png);
+    background-size: cover;
+}
+
+.social-link .tw{
+    background-image: url(../asset/tweeter.png);
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+
+    .navigation{
+        display: block;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    }
+
+    .navbar-brand, .navbar .nav-link{
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .canhover:hover::after{
         content: "";
         display: block;
         border-bottom: 3px solid #0b63cb;
-        width: 50%;
+        width: 30%;
         margin: auto;
         padding-bottom: 4px;
         margin-bottom: -7px;
@@ -58,6 +274,15 @@
         border-left: 4px solid white;
         border-radius: 0px 4px 4px 0px;
         margin-left:15px;
+    }
+
+    .dropdown-item{
+        color: white !important;
+        opacity: 1;
+    }
+
+    .dropdown-item:hover{
+        background: #333;
     }
 
     .jumbotron {
@@ -72,5 +297,47 @@
 
     .jumbotron .lead{
         font-size: 25px;
+    }
+
+    .container-body .main-content {
+        width: 60%;
+        margin: auto;
+        background-color: #E89F71;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    .short-desc h1{
+        text-transform: uppercase;
+        color: white;
+        font-size: 24px;
+    }
+
+    .container-body .main-content .short-desc {
+        background-color: rgba(170,74, 48, .64);
+        border-radius: 0px 12px 12px 0px;
+        margin-right: 50px;
+        padding: 30px 50px 30px 20px;
+    }
+
+    .container-body .main-content .short-desc .content{
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-left: 15px;
+        border-left: 3px solid white;
+        text-align: justify;
+    }
+
+    .social .footerus{
+        margin-left: 15%;
+    }
+
+    .social-link .icon{
+        margin-left: 10%;
+    }
+
+    .social-icon{
+        width: 60%;
     }
 }

@@ -1,0 +1,234 @@
+
+.navigation{
+    position: relative;
+    z-index: 3;
+}
+
+.navigation::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    background-color: #444;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-link, .navbar-brand {
+    margin-right: 30px;
+    text-transform: uppercase;
+    color: black !important;
+}    
+
+.dropdown-menu .dropdown-item{
+    color: black;
+}
+
+.dropdown-menu{
+    border: 0px solid;
+    border-left: 3px solid;
+    margin-left: 12px;
+    background-color: transparent;
+}
+
+.container-body {
+    min-height: 700px;
+    position: relative;
+    padding-top:30px;
+    padding-bottom:30px;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(35, 15, 19, 1), rgba(237,207, 169, 1));
+    padding-top:30px;
+}
+
+.page-title{
+    background-color:rgba(170,74, 48, .64);
+    height: 40px;
+    width: 50%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.page-title h1{
+    margin-left: 10%;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.list-e-book{
+    margin: 20px 10% 20px 10%;
+    border-left: 3px solid white;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 10px 20px 10px 20px;
+}
+
+.list-e-book a{
+    display:block;
+    position: relative;
+    margin-bottom: 10px;
+    color:white;
+    z-index: 2;
+    height: 35px;
+    line-height: 35px;
+}
+
+.list-e-book a:hover{
+    color: blue;
+}
+
+.list-e-book a:hover::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom:0;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-left: -5px;
+}
+
+.footer{
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 40px;
+}
+
+.copyright, .social{
+    display: inline-block;
+    line-height: 40px;
+    position: relative;
+}
+
+.footer .copyright{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.footer .social{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+
+.copyright::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    right : -1px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background-color: #000;
+    border-radius:10px;
+    height:80%;
+    width: 2px;
+}
+
+.social .footerus{
+    margin-left: 10%;
+    margin-right: 5%;
+    display: inline-block;
+}
+
+.social-icon {
+    position: absolute;
+    margin-left: 10%;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    display: inline-block;
+    height: 30px;
+    width: 50%;
+    margin-left: 5px;
+}
+
+.social-link .icon{
+    display: inline-block;
+    height:20px;
+    width:20px;
+    margin-left: 5px;
+}
+
+.social-link .wa{
+    background-image: url(../asset/wa.png);
+    background-size: cover;
+}
+
+.social-link .fb{
+    background-image: url(../asset/fb.png);
+    background-size: cover;
+}
+
+.social-link .ig{
+    background-image: url(../asset/ig.png);
+    background-size: cover;
+}
+
+.social-link .tw{
+    background-image: url(../asset/tweeter.png);
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+
+    .navigation{
+        display: block;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    }
+
+    .navbar-brand, .navbar .nav-link{
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .canhover:hover::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid #0b63cb;
+        width: 30%;
+        margin: auto;
+        padding-bottom: 4px;
+        margin-bottom: -7px;
+    }
+
+    .dropdown-menu{
+        background-color: black; opacity: .4;
+        border: 0px solid;
+        border-left: 4px solid white;
+        border-radius: 0px 4px 4px 0px;
+        margin-left:15px;
+    }
+
+    .dropdown-item{
+        color: white !important;
+        opacity: 1;
+    }
+
+    .dropdown-item:hover{
+        background: #333;
+    }
+
+    .container-body .main-content {
+        width: 60%;
+        margin: auto;
+        background-color: #E89F71;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 9px;
+    }
+
+    .social .footerus{
+        margin-left: 15%;
+    }
+
+    .social-link .icon{
+        margin-left: 10%;
+    }
+
+    .social-icon{
+        width: 60%;
+    }
+}
